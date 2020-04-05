@@ -3,6 +3,7 @@ package neptune;
 import neptune.common.block.BlockControl;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,9 +21,10 @@ import org.apache.logging.log4j.Logger;
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod("neptune")
+@Mod(NeptuneMod.MODID)
 public class NeptuneMod
 {
+    public static final String MODID = "neptune";
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
@@ -80,6 +82,11 @@ public class NeptuneMod
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
             // register a new block here
             LOGGER.info("HELLO from Register Block");
+            blockRegistryEvent.getRegistry().register(new BlockControl());
+        }
+
+        public static void onItemRegistry(final RegistryEvent.Register<Item> itemRegistryEvent) {
+
         }
     }
 }
