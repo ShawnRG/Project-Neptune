@@ -1,5 +1,7 @@
 {
   "item.neptune.example_item" : "Example Item",
   "item.neptune.binoculars_item": "Binoculars",
+  "item.neptune.steel_compound_item": "Steel Compound",
+  "item.neptune.steel_ingot": "Steel Ingot",
   "itemGroup.neptune": "Neptune Mod"
 }
